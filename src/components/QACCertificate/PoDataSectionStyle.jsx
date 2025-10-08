@@ -46,6 +46,10 @@ export const TableWrapper = styled.div`
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   width: 100%;
+
+  @media (min-width: 768px) {
+    overflow-x: visible;
+  }
 `;
 
 export const MainDataTable = styled.table`
