@@ -46,6 +46,8 @@ export const TableWrapper = styled.div`
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   width: 100%;
+  position: relative;
+  max-width: 100%;
 `;
 
 export const CustomGridTable = styled.table`

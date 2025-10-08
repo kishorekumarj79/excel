@@ -6,11 +6,7 @@ export const TableWrapper = styled.div`
   -webkit-overflow-scrolling: touch;
   width: 100%;
   position: relative;
-  isolation: isolate;
-
-  @media (min-width: 768px) {
-    overflow-x: visible;
-  }
+  max-width: 100%;
 `;
 
 export const CustomGridTable = styled.table`
