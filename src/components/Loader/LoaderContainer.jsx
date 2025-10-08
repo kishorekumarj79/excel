@@ -35,18 +35,24 @@ const LoaderWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 300px;
+  min-height: 50vh;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
 
   @media (min-width: 640px) {
-    min-height: 400px;
+    min-height: 60vh;
     padding: 40px;
   }
 
   @media (min-width: 1024px) {
-    min-height: 500px;
+    min-height: 70vh;
+    padding: 60px;
+  }
+
+  @media (min-width: 1440px) {
+    min-height: 75vh;
+    padding: 80px;
   }
 `;
 
@@ -63,9 +69,15 @@ const SpinnerContainer = styled.div`
   }
 
   @media (min-width: 1024px) {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 32px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 36px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -83,7 +95,11 @@ const OuterRing = styled.div`
   }
 
   @media (min-width: 1024px) {
-    border-width: 5px;
+    border-width: 6px;
+  }
+
+  @media (min-width: 1440px) {
+    border-width: 7px;
   }
 `;
 
@@ -116,8 +132,13 @@ const LoadingText = styled.div`
   }
 
   @media (min-width: 1024px) {
-    font-size: 20px;
-    margin-bottom: 12px;
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 28px;
+    margin-bottom: 16px;
   }
 `;
 
@@ -134,7 +155,11 @@ const SubtitleText = styled.div`
   }
 
   @media (min-width: 1024px) {
-    font-size: 16px;
+    font-size: 18px;
+  }
+
+  @media (min-width: 1440px) {
+    font-size: 20px;
   }
 `;
 
@@ -149,8 +174,13 @@ const DotsContainer = styled.div`
   }
 
   @media (min-width: 1024px) {
-    gap: 10px;
-    margin-top: 24px;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  @media (min-width: 1440px) {
+    gap: 14px;
+    margin-top: 32px;
   }
 `;
 
@@ -167,8 +197,13 @@ const Dot = styled.div`
   }
 
   @media (min-width: 1024px) {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
+  }
+
+  @media (min-width: 1440px) {
+    width: 14px;
+    height: 14px;
   }
 `;
 
