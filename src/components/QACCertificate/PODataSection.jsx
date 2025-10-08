@@ -1,7 +1,6 @@
-// components/QACCertificate/PODataSection.jsx
 import React from 'react';
 import { Plus, Trash2 } from 'lucide-react';
-import { SectionBorder, SectionHeader, SectionTitle, AddBtn, MainDataTable, HeaderRow1, HeaderRow2, HeaderCell, DataRow, DataCell, ActionCell, CellInput } from './PoDataSectionStyle';
+import { SectionBorder, SectionHeader, SectionTitle, AddBtn, TableWrapper, MainDataTable, HeaderRow1, HeaderRow2, HeaderCell, DataRow, DataCell, ActionCell, CellInput } from './PoDataSectionStyle';
 
 export default function PODataSection({ editable, rows, onRowsChange, onAddRow, onDeleteRow }) {
   const handleInputChange = (rowId, key, value, overriddenKey = null) => {
@@ -40,8 +39,9 @@ export default function PODataSection({ editable, rows, onRowsChange, onAddRow, 
           </AddBtn>
         )}
       </SectionHeader>
-      
-      <MainDataTable>
+
+      <TableWrapper>
+        <MainDataTable>
         <thead>
           <HeaderRow1>
             <HeaderCell rowSpan="2">SL NO</HeaderCell>
@@ -119,6 +119,7 @@ export default function PODataSection({ editable, rows, onRowsChange, onAddRow, 
           ))}
         </tbody>
       </MainDataTable>
+      </TableWrapper>
     </SectionBorder>
   );
 }

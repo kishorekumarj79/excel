@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Plus, Trash2, Paperclip } from 'lucide-react';
-import { SectionBorder, SectionHeader, SectionTitle, AddBtn, CustomGridTable, GridHeaderCell, GridDataCell, CellInput } from './AttachmentSectionStyle';
+import { SectionBorder, SectionHeader, SectionTitle, AddBtn, TableWrapper, CustomGridTable, GridHeaderCell, GridDataCell, CellInput } from './AttachmentSectionStyle';
 
 const attachmentColumns = [
   { key: 'no', name: 'No.', width: 60 },
@@ -39,7 +39,8 @@ export default function AttachmentsSection({ editable, attachmentRows, onAddAtta
         style={{ display: 'none' }}
         accept="*/*"
       />
-      <CustomGridTable className="attach-table">
+      <TableWrapper>
+        <CustomGridTable className="attach-table">
         <thead>
           <tr>
             {attachmentColumns.map((col) => (
@@ -83,6 +84,7 @@ export default function AttachmentsSection({ editable, attachmentRows, onAddAtta
           ))}
         </tbody>
       </CustomGridTable>
+      </TableWrapper>
     </SectionBorder>
   );
 }

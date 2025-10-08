@@ -6,12 +6,13 @@ import TotalRow from './TotalRow';
 import FooterSection from './FooterSection';
 import AttachmentsSection from './AttachmentsSection';
 import { GlobalStyle } from './QACGlobalStyles';
-import { 
-  QacContainer, 
-  QacWrapper, 
-  TitleSection, 
-  LogoBox, 
+import {
+  QacContainer,
+  QacWrapper,
+  TitleSection,
+  LogoBox,
   MainTitle,
+  TitleActions,
   BtnBlue
 } from './QACStyledComponents';
 import { useQACStore } from '../../stores/useQACStore';
@@ -19,18 +20,10 @@ import LoaderContainer from '../Loader/LoaderContainer';
 
 import logo from '../../assets/nature-27.jpg';
 
-// RoleSelector Component
 const RoleSelector = ({ role, onRoleChange }) => (
   <select
     value={role}
     onChange={(e) => onRoleChange(e.target.value)}
-    style={{
-      padding: '5px 10px',
-      border: '1px solid #ccc',
-      borderRadius: '4px',
-      marginRight: '10px',
-      fontSize: '14px'
-    }}
   >
     <option value="user">User</option>
     <option value="admin">Admin</option>
@@ -101,14 +94,9 @@ export default function QACCertificate() {
         <QacWrapper>
           <TitleSection>
             <LogoBox>
-              <img 
-                src={logo} 
-                alt="Company Logo" 
-                style={{
-                  width: '120px',
-                  height: 'auto',
-                  objectFit: 'contain',
-                }} 
+              <img
+                src={logo}
+                alt="Company Logo"
               />
             </LogoBox>
 
@@ -116,13 +104,12 @@ export default function QACCertificate() {
               QUANTITY & AMOUNT CERTIFICATE (GENERAL QAC)
             </MainTitle>
 
-            <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-              <div style={{ width: '130px' }}></div>
+            <TitleActions>
               <RoleSelector role={role} onRoleChange={setRole} />
               <BtnBlue onClick={saveData} className="btn-blue">
                 Save
               </BtnBlue>
-            </div>
+            </TitleActions>
           </TitleSection>
 
           <HeaderSection

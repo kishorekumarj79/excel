@@ -1,11 +1,11 @@
-// components/QACCertificate/CertifiedByTable.jsx
 import React from 'react';
 import { Trash2 } from 'lucide-react';
-import { CustomGridTable, GridHeaderCell, GridDataCell, CellInput, ActionCell } from './CertifiedByTableStyle';
+import { TableWrapper, CustomGridTable, GridHeaderCell, GridDataCell, CellInput, ActionCell } from './CertifiedByTableStyle';
 
 export default function CertifiedByTable({ editable, rows, columns, onChange, onDeleteRow }) {
   return (
-    <CustomGridTable className="footer-table">
+    <TableWrapper>
+      <CustomGridTable className="footer-table">
       <thead>
         <tr>
           {columns.map((col) => (
@@ -41,5 +41,6 @@ export default function CertifiedByTable({ editable, rows, columns, onChange, on
         ))}
       </tbody>
     </CustomGridTable>
+    </TableWrapper>
   );
 }

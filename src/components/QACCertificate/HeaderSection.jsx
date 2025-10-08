@@ -1,7 +1,6 @@
-// components/QACCertificate/HeaderSection.jsx
 import React from 'react';
 import { Plus, Trash2 } from 'lucide-react';
-import { SectionBorder, SectionHeader, SectionTitle, AddBtn, CustomGridTable, GridHeaderCell, GridDataCell, CellInput } from './HeaderSectionStyle';
+import { SectionBorder, SectionHeader, SectionTitle, AddBtn, TableWrapper, CustomGridTable, GridHeaderCell, GridDataCell, CellInput } from './HeaderSectionStyle';
 
 const headerColumns = [
   { key: 'subContractor', name: 'Sub Contractor / Supplier', width: 300 },
@@ -30,7 +29,7 @@ export default function HeaderSection({ editable, headerRows, onAddHeaderRow, on
           </AddBtn>
         )}
       </SectionHeader>
-      <div className="table-wrapper">
+      <TableWrapper>
         <CustomGridTable className="header-table">
           <thead>
             <tr>
@@ -67,7 +66,7 @@ export default function HeaderSection({ editable, headerRows, onAddHeaderRow, on
             ))}
           </tbody>
         </CustomGridTable>
-      </div>
+      </TableWrapper>
     </SectionBorder>
   );
 }
