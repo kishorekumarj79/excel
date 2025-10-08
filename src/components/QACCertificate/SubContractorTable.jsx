@@ -1,11 +1,11 @@
-// components/QACCertificate/SubContractorTable.jsx
 import React from 'react';
 import { Trash2 } from 'lucide-react';
-import { CustomGridTable, GridHeaderCell, GridDataCell, CellInput, ActionCell } from './SubContractorStyle';
+import { TableWrapper, CustomGridTable, GridHeaderCell, GridDataCell, CellInput, ActionCell } from './SubContractorStyle';
 
 export default function SubContractorTable({ editable, rows, columns, onChange, onDeleteRow }) {
   return (
-    <CustomGridTable className="footer-table">
+    <TableWrapper>
+      <CustomGridTable className="footer-table">
       <thead>
         <tr>
           {columns.map((col) => (
@@ -41,5 +41,6 @@ export default function SubContractorTable({ editable, rows, columns, onChange, 
         ))}
       </tbody>
     </CustomGridTable>
+    </TableWrapper>
   );
 }

@@ -1,11 +1,11 @@
-// components/QACCertificate/VerifiedByTable.jsx
 import React from 'react';
 import { Trash2 } from 'lucide-react';
-import { CustomGridTable, GridHeaderCell, GridDataCell, CellInput, ActionCell } from './VerifiedByTableStyle';
+import { TableWrapper, CustomGridTable, GridHeaderCell, GridDataCell, CellInput, ActionCell } from './VerifiedByTableStyle';
 
 export default function VerifiedByTable({ editable, rows, columns, onChange, onDeleteRow }) {
   return (
-    <CustomGridTable className="footer-table">
+    <TableWrapper>
+      <CustomGridTable className="footer-table">
       <thead>
         <tr>
           {columns.map((col) => (
@@ -41,5 +41,6 @@ export default function VerifiedByTable({ editable, rows, columns, onChange, onD
         ))}
       </tbody>
     </CustomGridTable>
+    </TableWrapper>
   );
 }

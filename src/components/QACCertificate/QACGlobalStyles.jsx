@@ -1,17 +1,27 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  .title-actions {
-    /* Handled in styled component now */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    -webkit-text-size-adjust: 100%;
+    touch-action: pan-y;
   }
 
   .delete-btn {
-    padding: 3px;
+    padding: 8px;
     background: none;
     border: none;
     color: #dc2626;
     cursor: pointer;
     border-radius: 3px;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .delete-btn:hover {
     background-color: #fee2e2;
@@ -21,7 +31,14 @@ export const GlobalStyle = createGlobalStyle`
     cursor: not-allowed;
   }
 
- 
+  @media (min-width: 768px) {
+    .delete-btn {
+      padding: 3px;
+      min-width: auto;
+      min-height: auto;
+    }
+  }
+
   .btn-green {
     background-color: #16a34a;
   }
@@ -47,7 +64,6 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #c2410c;
   }
 
-  /* Add mobile-specific global styles if needed for other components */
   @media (max-width: 767px) {
     body {
       font-size: 14px;
