@@ -35,23 +35,24 @@ const LoaderWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
+  min-height: 100vh;
+  width: 100vw;
   padding: 20px;
-  width: 100%;
   box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
 
   @media (min-width: 640px) {
-    min-height: 60vh;
     padding: 40px;
   }
 
   @media (min-width: 1024px) {
-    min-height: 70vh;
     padding: 60px;
   }
 
   @media (min-width: 1440px) {
-    min-height: 75vh;
     padding: 80px;
   }
 `;
